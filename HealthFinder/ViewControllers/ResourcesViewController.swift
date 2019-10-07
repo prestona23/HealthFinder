@@ -14,17 +14,25 @@ class ResourcesViewController: UIViewController {
     @IBOutlet weak var sexSegmentedControl: UISegmentedControl!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var resourcesTableView: UITableView!
+    @IBOutlet weak var progressView: UIView!
     
     private let resourceListProvider = ResourceListProvider()
     private let CellIdentifier = "ResourceListCell"
     private let ResourceDetailSegueIdentifier = "showDetail"
+    private let cornerRadius: CGFloat = 5.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupProgressView()
         setupTableView()
         setupSearchFields()
+    }
+    
+    private func setupProgressView() {
+        progressView.layer.cornerRadius = cornerRadius
+        hideProgressView(true)
     }
     
     private func setupTableView() {
@@ -33,7 +41,7 @@ class ResourcesViewController: UIViewController {
     }
     
     private func setupSearchFields() {
-        searchButton.layer.cornerRadius = 5.0
+        searchButton.layer.cornerRadius = cornerRadius
     }
     
     private func searchForResources() {
@@ -41,9 +49,11 @@ class ResourcesViewController: UIViewController {
         let sex = (sexSegmentedControl.selectedSegmentIndex == 0) ? "Male" : "Female"
         
         enableSearchControls(false)
+        hideProgressView(false)
         
         NetworkManager().getHealthFinderResultsFor(age: age, sex: sex) { (result) in
             
+            self.hideProgressView(true)
             self.enableSearchControls(true)
             
             switch result {
@@ -81,6 +91,10 @@ class ResourcesViewController: UIViewController {
     
     private func enableSearchControls(_ enable: Bool) {
         searchButton.isEnabled = enable
+    }
+    
+    private func hideProgressView(_ hide: Bool) {
+        progressView.isHidden = hide
     }
 
     @IBAction func didClickSearch(_ sender: Any) {

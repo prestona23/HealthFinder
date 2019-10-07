@@ -30,7 +30,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GFl-lF-49a">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GFl-lF-49a">
                                                         <rect key="frame" x="46" y="8" width="71" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -144,12 +144,29 @@
                                     <outlet property="dataSource" destination="1hs-lt-gRM" id="Qbc-B9-5pj"/>
                                 </connections>
                             </tableView>
+                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wpE-jX-Rz8" userLabel="ProgressView">
+                                <rect key="frame" x="149" y="295" width="77" height="77"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="4fy-nK-QnI">
+                                        <rect key="frame" x="20" y="20" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="7gA-5K-waj"/>
+                                    <constraint firstItem="4fy-nK-QnI" firstAttribute="centerY" secondItem="wpE-jX-Rz8" secondAttribute="centerY" id="BoB-mj-qEP"/>
+                                    <constraint firstItem="4fy-nK-QnI" firstAttribute="centerX" secondItem="wpE-jX-Rz8" secondAttribute="centerX" id="OdS-jR-KNc"/>
+                                    <constraint firstAttribute="width" constant="77" id="aoq-5a-oN4"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="paq-aS-t03" firstAttribute="leading" secondItem="Nud-Fc-VUk" secondAttribute="leading" id="FVj-m4-oB9"/>
                             <constraint firstItem="jIY-zU-ZXa" firstAttribute="trailing" secondItem="Nud-Fc-VUk" secondAttribute="trailing" id="Hjj-js-UE0"/>
+                            <constraint firstItem="wpE-jX-Rz8" firstAttribute="centerY" secondItem="84u-M7-3ll" secondAttribute="centerY" id="OjA-ro-Nl1"/>
                             <constraint firstItem="paq-aS-t03" firstAttribute="top" secondItem="Nud-Fc-VUk" secondAttribute="top" id="ftL-pN-Z1J"/>
+                            <constraint firstItem="wpE-jX-Rz8" firstAttribute="centerX" secondItem="84u-M7-3ll" secondAttribute="centerX" id="gb1-gi-2v7"/>
                             <constraint firstItem="paq-aS-t03" firstAttribute="trailing" secondItem="Nud-Fc-VUk" secondAttribute="trailing" id="h0S-1l-1iL"/>
                             <constraint firstItem="jIY-zU-ZXa" firstAttribute="top" secondItem="paq-aS-t03" secondAttribute="bottom" id="oVf-bj-GtC"/>
                             <constraint firstItem="jIY-zU-ZXa" firstAttribute="leading" secondItem="Nud-Fc-VUk" secondAttribute="leading" id="on2-kh-GWu"/>
@@ -160,6 +177,7 @@
                     <navigationItem key="navigationItem" title="Resources" id="QTV-U5-a3H"/>
                     <connections>
                         <outlet property="ageTextField" destination="GFl-lF-49a" id="Mrb-gO-Lqr"/>
+                        <outlet property="progressView" destination="wpE-jX-Rz8" id="WN5-Ak-qyx"/>
                         <outlet property="resourcesTableView" destination="jIY-zU-ZXa" id="H32-8Y-0kM"/>
                         <outlet property="searchButton" destination="wIj-Vx-Nj1" id="BH5-hk-4Ec"/>
                         <outlet property="sexSegmentedControl" destination="cpy-lX-DS5" id="Qfm-qC-bge"/>
