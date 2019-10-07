@@ -42,7 +42,7 @@ class ResourcesViewController: UIViewController {
             
             switch result {
             case .success(let healthFinderResults):
-                print(healthFinderResults)
+                
                 if let error = healthFinderResults.result?.error, error == "True" {
                     print("Server Error")
                 }
@@ -90,9 +90,10 @@ class ResourcesViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == ResourceDetailSegueIdentifier {
             if let navigationController = segue.destination as? UINavigationController,
-                let detailController = navigationController.topViewController as? ResourceDetailViewController,
-                let index = resourcesTableView.indexPathForSelectedRow?.row {
-                    detailController.resource = resourceListProvider.resourceAt(index: index)
+            let detailController = navigationController.topViewController as? ResourceDetailViewController,
+            let indexPath = resourcesTableView.indexPathForSelectedRow {
+                resourcesTableView.deselectRow(at: indexPath, animated: true)
+                detailController.resource = resourceListProvider.resourceAt(index: indexPath.row)
             }
             
         }
@@ -101,16 +102,24 @@ class ResourcesViewController: UIViewController {
 
 }
 
+// MARK: - UITableView Datasource
+
 extension ResourcesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         resourceListProvider.resourceCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath)
+        //There are a few ways to go about this. Apple routinely just force unwraps ("!") the cell causing a crash if it's not
+        //the proper cell type. This isn't necessarily bad because you "should" have a table cell at this point and if you don't
+        //there is probably something catastrophically wrong. The other option is to not crash and return a cell
+        //which may confuse the end user. Chose the more defensive approach here.
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath) as? ResourceTableViewCell else {
+            return UITableViewCell()
+        }
 
         let resource = resourceListProvider.resourceAt(index: indexPath.row)
-        cell.textLabel?.text = resource?.title ?? ""
+        cell.configureCell(forResource: resource)
 
         return cell
     }

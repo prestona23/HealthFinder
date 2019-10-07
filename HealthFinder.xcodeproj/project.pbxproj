@@ -21,6 +21,7 @@
 		9305B9F1234B7F05006F8895 /* ResourceListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305B9F0234B7F05006F8895 /* ResourceListProvider.swift */; };
 		9305B9F3234B8642006F8895 /* ResourceDetailListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305B9F2234B8642006F8895 /* ResourceDetailListProvider.swift */; };
 		9305B9F5234B88F0006F8895 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305B9F4234B88F0006F8895 /* ContentViewController.swift */; };
+		9305B9F8234B9359006F8895 /* ResourceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305B9F7234B9359006F8895 /* ResourceTableViewCell.swift */; };
 		93A5DF64234ADE3F00F886BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5DF63234ADE3F00F886BD /* AppDelegate.swift */; };
 		93A5DF66234ADE3F00F886BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5DF65234ADE3F00F886BD /* SceneDelegate.swift */; };
 		93A5DF6B234ADE3F00F886BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A5DF69234ADE3F00F886BD /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		9305B9F0234B7F05006F8895 /* ResourceListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceListProvider.swift; sourceTree = "<group>"; };
 		9305B9F2234B8642006F8895 /* ResourceDetailListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceDetailListProvider.swift; sourceTree = "<group>"; };
 		9305B9F4234B88F0006F8895 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		9305B9F7234B9359006F8895 /* ResourceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceTableViewCell.swift; sourceTree = "<group>"; };
 		93A5DF60234ADE3F00F886BD /* HealthFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A5DF63234ADE3F00F886BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93A5DF65234ADE3F00F886BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,14 @@
 			path = Providers;
 			sourceTree = "<group>";
 		};
+		9305B9F6234B9333006F8895 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9305B9F7234B9359006F8895 /* ResourceTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		93A5DF57234ADE3F00F886BD = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +166,7 @@
 		93A5DF62234ADE3F00F886BD /* HealthFinder */ = {
 			isa = PBXGroup;
 			children = (
+				9305B9F6234B9333006F8895 /* Cells */,
 				9305B9EF234B7EEA006F8895 /* Providers */,
 				9305B9EC234B779B006F8895 /* Enums */,
 				9305B9E9234B7763006F8895 /* Managers */,
@@ -342,12 +353,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HealthFinder/Pods-HealthFinder-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -393,6 +406,7 @@
 				9305B9DC234B7513006F8895 /* MyHealthFinderService.swift in Sources */,
 				9305B9E6234B768F006F8895 /* Sections.swift in Sources */,
 				9305B9F3234B8642006F8895 /* ResourceDetailListProvider.swift in Sources */,
+				9305B9F8234B9359006F8895 /* ResourceTableViewCell.swift in Sources */,
 				93A5DF89234AE4D100F886BD /* ResourceDetailViewController.swift in Sources */,
 				9305B9E2234B75DD006F8895 /* Resources.swift in Sources */,
 				9305B9F1234B7F05006F8895 /* ResourceListProvider.swift in Sources */,

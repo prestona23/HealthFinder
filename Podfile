@@ -7,6 +7,7 @@ target 'HealthFinder' do
 
   # Pods for HealthFinder
   pod 'Alamofire', '4.8.0'
+  pod 'AlamofireImage', '3.5.2'
 
   target 'HealthFinderTests' do
     inherit! :search_paths
