@@ -219,6 +219,9 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vhn-cv-RTD" id="dr1-jg-7On"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -231,6 +234,9 @@
                         <viewLayoutGuide key="safeArea" id="kdP-5k-dMe"/>
                     </view>
                     <navigationItem key="navigationItem" id="UGH-24-yt0"/>
+                    <connections>
+                        <outlet property="sectionTableView" destination="VlF-UV-nZM" id="eyV-o0-I13"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cg3-Dk-Nxl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

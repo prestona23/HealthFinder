@@ -17,6 +17,7 @@ class ResourcesViewController: UIViewController {
     
     private let resourceListProvider = ResourceListProvider()
     private let CellIdentifier = "ResourceListCell"
+    private let ResourceDetailSegueIdentifier = "showDetail"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +34,12 @@ class ResourcesViewController: UIViewController {
         let age = ageTextField.text ?? ""
         let sex = (sexSegmentedControl.selectedSegmentIndex == 0) ? "Male" : "Female"
         
+        enableSearchControls(false)
+        
         NetworkManager().getHealthFinderResultsFor(age: age, sex: sex) { (result) in
+            
+            self.enableSearchControls(true)
+            
             switch result {
             case .success(let healthFinderResults):
                 print(healthFinderResults)
@@ -66,6 +72,10 @@ class ResourcesViewController: UIViewController {
         resourceListProvider.refreshResources(resources: resources)
         resourcesTableView.reloadData()
     }
+    
+    private func enableSearchControls(_ enable: Bool) {
+        searchButton.isEnabled = enable
+    }
 
     @IBAction func didClickSearch(_ sender: Any) {
         ageTextField.resignFirstResponder()
@@ -73,15 +83,21 @@ class ResourcesViewController: UIViewController {
         searchForResources()
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == ResourceDetailSegueIdentifier {
+            if let navigationController = segue.destination as? UINavigationController,
+                let detailController = navigationController.topViewController as? ResourceDetailViewController,
+                let index = resourcesTableView.indexPathForSelectedRow?.row {
+                    detailController.resource = resourceListProvider.resourceAt(index: index)
+            }
+            
+        }
     }
-    */
+    
 
 }
 
