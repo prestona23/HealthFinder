@@ -26,12 +26,26 @@
 		9305B9FD234BC7A1006F8895 /* UIViewController+ShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305B9FC234BC7A1006F8895 /* UIViewController+ShowAlert.swift */; };
 		9305BA00234BCB6D006F8895 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305B9FF234BCB6D006F8895 /* Validator.swift */; };
 		9305BA02234BCE51006F8895 /* UITextField+Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305BA01234BCE51006F8895 /* UITextField+Validator.swift */; };
+		9305BA04234BD3EF006F8895 /* HealthFinderResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305BA03234BD3EF006F8895 /* HealthFinderResultTests.swift */; };
+		9305BA05234BD41A006F8895 /* HealthFinderResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305B9ED234B77C1006F8895 /* HealthFinderResult.swift */; };
+		9305BA07234BD4F5006F8895 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305BA06234BD4F5006F8895 /* NetworkManagerTests.swift */; };
+		9305BA08234BD521006F8895 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305B9EA234B7776006F8895 /* NetworkManager.swift */; };
+		9305BA09234BD542006F8895 /* MyHealthFinderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305B9DB234B7513006F8895 /* MyHealthFinderService.swift */; };
+		9305BA0A234BD5C5006F8895 /* MyHealthFinderResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305B9DD234B753E006F8895 /* MyHealthFinderResult.swift */; };
+		9305BA0B234BD5CB006F8895 /* InlineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305B9DF234B75B1006F8895 /* InlineModel.swift */; };
+		9305BA0C234BD5CE006F8895 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305B9E1234B75DD006F8895 /* Resources.swift */; };
+		9305BA0D234BD5D1006F8895 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305B9E3234B761D006F8895 /* Resource.swift */; };
+		9305BA0E234BD5D4006F8895 /* Sections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305B9E5234B768F006F8895 /* Sections.swift */; };
+		9305BA0F234BD5D6006F8895 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305B9E7234B76A7006F8895 /* Section.swift */; };
+		9305BA11234BD667006F8895 /* ResourceListProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305BA10234BD667006F8895 /* ResourceListProviderTests.swift */; };
+		9305BA12234BD687006F8895 /* ResourceListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305B9F0234B7F05006F8895 /* ResourceListProvider.swift */; };
+		9305BA14234BD8E1006F8895 /* ResourceDetailListProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305BA13234BD8E1006F8895 /* ResourceDetailListProviderTests.swift */; };
+		9305BA15234BD902006F8895 /* ResourceDetailListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305B9F2234B8642006F8895 /* ResourceDetailListProvider.swift */; };
 		93A5DF64234ADE3F00F886BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5DF63234ADE3F00F886BD /* AppDelegate.swift */; };
 		93A5DF66234ADE3F00F886BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5DF65234ADE3F00F886BD /* SceneDelegate.swift */; };
 		93A5DF6B234ADE3F00F886BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A5DF69234ADE3F00F886BD /* Main.storyboard */; };
 		93A5DF6D234ADE4000F886BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93A5DF6C234ADE4000F886BD /* Assets.xcassets */; };
 		93A5DF70234ADE4000F886BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A5DF6E234ADE4000F886BD /* LaunchScreen.storyboard */; };
-		93A5DF7B234ADE4000F886BD /* HealthFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5DF7A234ADE4000F886BD /* HealthFinderTests.swift */; };
 		93A5DF87234AE46200F886BD /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5DF86234AE46200F886BD /* ResourcesViewController.swift */; };
 		93A5DF89234AE4D100F886BD /* ResourceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5DF88234AE4D100F886BD /* ResourceDetailViewController.swift */; };
 /* End PBXBuildFile section */
@@ -65,6 +79,10 @@
 		9305B9FC234BC7A1006F8895 /* UIViewController+ShowAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ShowAlert.swift"; sourceTree = "<group>"; };
 		9305B9FF234BCB6D006F8895 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		9305BA01234BCE51006F8895 /* UITextField+Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Validator.swift"; sourceTree = "<group>"; };
+		9305BA03234BD3EF006F8895 /* HealthFinderResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthFinderResultTests.swift; sourceTree = "<group>"; };
+		9305BA06234BD4F5006F8895 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		9305BA10234BD667006F8895 /* ResourceListProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceListProviderTests.swift; sourceTree = "<group>"; };
+		9305BA13234BD8E1006F8895 /* ResourceDetailListProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceDetailListProviderTests.swift; sourceTree = "<group>"; };
 		93A5DF60234ADE3F00F886BD /* HealthFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A5DF63234ADE3F00F886BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93A5DF65234ADE3F00F886BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,7 +91,6 @@
 		93A5DF6F234ADE4000F886BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93A5DF71234ADE4000F886BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A5DF76234ADE4000F886BD /* HealthFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		93A5DF7A234ADE4000F886BD /* HealthFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthFinderTests.swift; sourceTree = "<group>"; };
 		93A5DF7C234ADE4000F886BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A5DF86234AE46200F886BD /* ResourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesViewController.swift; sourceTree = "<group>"; };
 		93A5DF88234AE4D100F886BD /* ResourceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceDetailViewController.swift; sourceTree = "<group>"; };
@@ -213,8 +230,11 @@
 		93A5DF79234ADE4000F886BD /* HealthFinderTests */ = {
 			isa = PBXGroup;
 			children = (
-				93A5DF7A234ADE4000F886BD /* HealthFinderTests.swift */,
 				93A5DF7C234ADE4000F886BD /* Info.plist */,
+				9305BA03234BD3EF006F8895 /* HealthFinderResultTests.swift */,
+				9305BA06234BD4F5006F8895 /* NetworkManagerTests.swift */,
+				9305BA10234BD667006F8895 /* ResourceListProviderTests.swift */,
+				9305BA13234BD8E1006F8895 /* ResourceDetailListProviderTests.swift */,
 			);
 			path = HealthFinderTests;
 			sourceTree = "<group>";
@@ -452,7 +472,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93A5DF7B234ADE4000F886BD /* HealthFinderTests.swift in Sources */,
+				9305BA0E234BD5D4006F8895 /* Sections.swift in Sources */,
+				9305BA14234BD8E1006F8895 /* ResourceDetailListProviderTests.swift in Sources */,
+				9305BA11234BD667006F8895 /* ResourceListProviderTests.swift in Sources */,
+				9305BA07234BD4F5006F8895 /* NetworkManagerTests.swift in Sources */,
+				9305BA0A234BD5C5006F8895 /* MyHealthFinderResult.swift in Sources */,
+				9305BA05234BD41A006F8895 /* HealthFinderResult.swift in Sources */,
+				9305BA0D234BD5D1006F8895 /* Resource.swift in Sources */,
+				9305BA08234BD521006F8895 /* NetworkManager.swift in Sources */,
+				9305BA15234BD902006F8895 /* ResourceDetailListProvider.swift in Sources */,
+				9305BA0B234BD5CB006F8895 /* InlineModel.swift in Sources */,
+				9305BA04234BD3EF006F8895 /* HealthFinderResultTests.swift in Sources */,
+				9305BA0C234BD5CE006F8895 /* Resources.swift in Sources */,
+				9305BA12234BD687006F8895 /* ResourceListProvider.swift in Sources */,
+				9305BA0F234BD5D6006F8895 /* Section.swift in Sources */,
+				9305BA09234BD542006F8895 /* MyHealthFinderService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
