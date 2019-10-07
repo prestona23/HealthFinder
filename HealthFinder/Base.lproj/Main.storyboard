@@ -33,7 +33,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GFl-lF-49a">
                                                         <rect key="frame" x="46" y="8" width="71" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -69,10 +69,13 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIj-Vx-Nj1">
                                                         <rect key="frame" x="8" y="10" width="109" height="30"/>
-                                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="Button">
+                                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Search">
                                                             <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="didClickSearch:" destination="1hs-lt-gRM" eventType="touchUpInside" id="vHA-ZP-Kcj"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -119,6 +122,9 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="1hs-lt-gRM" id="Qbc-B9-5pj"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -134,6 +140,12 @@
                         <viewLayoutGuide key="safeArea" id="Nud-Fc-VUk"/>
                     </view>
                     <navigationItem key="navigationItem" title="Resources" id="QTV-U5-a3H"/>
+                    <connections>
+                        <outlet property="ageTextField" destination="GFl-lF-49a" id="Mrb-gO-Lqr"/>
+                        <outlet property="resourcesTableView" destination="jIY-zU-ZXa" id="H32-8Y-0kM"/>
+                        <outlet property="searchButton" destination="wIj-Vx-Nj1" id="BH5-hk-4Ec"/>
+                        <outlet property="sexSegmentedControl" destination="cpy-lX-DS5" id="Qfm-qC-bge"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tz7-ki-xNk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
