@@ -100,7 +100,25 @@ class ResourcesViewController: UIViewController {
     @IBAction func didClickSearch(_ sender: Any) {
         ageTextField.resignFirstResponder()
         
-        searchForResources()
+        if validateFields() {
+            searchForResources()
+        }
+    }
+    
+    private func validateFields() -> Bool {
+        do {
+            try ageTextField.validateTextField(type: .requiredField(field: "Age"))
+            try ageTextField.validateTextField(type: .validAgeRange(field: "Age"))
+        } catch let error as ValidationError {
+            showError(with: "Validation Error", message: error.message)
+            return false
+        } catch let error {
+            showError(with: "Validation Error", message: error.localizedDescription)
+            return false
+        }
+        
+        
+        return true
     }
     
     
