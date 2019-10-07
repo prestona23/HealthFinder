@@ -26,8 +26,14 @@ class ResourceDetailTableViewCell: UITableViewCell {
     
     func configureCell(forSection section: Section?) {
         
-        titleLabel?.text = section?.title ?? ""
-        subtitleLabel?.text = section?.description ?? ""
+        if section?.title == nil && section?.description == nil {
+            titleLabel.text = "Additional Content.."
+            subtitleLabel.text = ""
+        }
+        else {
+            titleLabel.text = section?.title ?? ""
+            subtitleLabel.text = section?.description ?? ""
+        }
     }
 
 }
