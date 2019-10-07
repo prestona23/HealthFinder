@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		93A5DF64234ADE3F00F886BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5DF63234ADE3F00F886BD /* AppDelegate.swift */; };
 		93A5DF66234ADE3F00F886BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5DF65234ADE3F00F886BD /* SceneDelegate.swift */; };
-		93A5DF68234ADE3F00F886BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5DF67234ADE3F00F886BD /* ViewController.swift */; };
 		93A5DF6B234ADE3F00F886BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A5DF69234ADE3F00F886BD /* Main.storyboard */; };
 		93A5DF6D234ADE4000F886BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93A5DF6C234ADE4000F886BD /* Assets.xcassets */; };
 		93A5DF70234ADE4000F886BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A5DF6E234ADE4000F886BD /* LaunchScreen.storyboard */; };
 		93A5DF7B234ADE4000F886BD /* HealthFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5DF7A234ADE4000F886BD /* HealthFinderTests.swift */; };
+		93A5DF87234AE46200F886BD /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5DF86234AE46200F886BD /* ResourcesViewController.swift */; };
+		93A5DF89234AE4D100F886BD /* ResourceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5DF88234AE4D100F886BD /* ResourceDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +31,6 @@
 		93A5DF60234ADE3F00F886BD /* HealthFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A5DF63234ADE3F00F886BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93A5DF65234ADE3F00F886BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		93A5DF67234ADE3F00F886BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		93A5DF6A234ADE3F00F886BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93A5DF6C234ADE4000F886BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93A5DF6F234ADE4000F886BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +38,8 @@
 		93A5DF76234ADE4000F886BD /* HealthFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A5DF7A234ADE4000F886BD /* HealthFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthFinderTests.swift; sourceTree = "<group>"; };
 		93A5DF7C234ADE4000F886BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93A5DF86234AE46200F886BD /* ResourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesViewController.swift; sourceTree = "<group>"; };
+		93A5DF88234AE4D100F886BD /* ResourceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +81,9 @@
 		93A5DF62234ADE3F00F886BD /* HealthFinder */ = {
 			isa = PBXGroup;
 			children = (
+				93A5DF85234AE43F00F886BD /* ViewControllers */,
 				93A5DF63234ADE3F00F886BD /* AppDelegate.swift */,
 				93A5DF65234ADE3F00F886BD /* SceneDelegate.swift */,
-				93A5DF67234ADE3F00F886BD /* ViewController.swift */,
 				93A5DF69234ADE3F00F886BD /* Main.storyboard */,
 				93A5DF6C234ADE4000F886BD /* Assets.xcassets */,
 				93A5DF6E234ADE4000F886BD /* LaunchScreen.storyboard */,
@@ -97,6 +99,15 @@
 				93A5DF7C234ADE4000F886BD /* Info.plist */,
 			);
 			path = HealthFinderTests;
+			sourceTree = "<group>";
+		};
+		93A5DF85234AE43F00F886BD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				93A5DF86234AE46200F886BD /* ResourcesViewController.swift */,
+				93A5DF88234AE4D100F886BD /* ResourceDetailViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,8 +211,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93A5DF68234ADE3F00F886BD /* ViewController.swift in Sources */,
 				93A5DF64234ADE3F00F886BD /* AppDelegate.swift in Sources */,
+				93A5DF89234AE4D100F886BD /* ResourceDetailViewController.swift in Sources */,
+				93A5DF87234AE46200F886BD /* ResourcesViewController.swift in Sources */,
 				93A5DF66234ADE3F00F886BD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
