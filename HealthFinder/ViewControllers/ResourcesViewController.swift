@@ -60,13 +60,13 @@ class ResourcesViewController: UIViewController {
             case .success(let healthFinderResults):
                 
                 if let error = healthFinderResults.result?.error, error == "True" {
-                    print("Server Error")
+                    self.showError(with: "Networking Error", message: "There was an error contacting the server. Please try again later.")
                 }
                 else if let results = healthFinderResults.result {
                     self.updateTableWith(results)
                 }
             case .failure(let error):
-                print(error.localizedDescription)
+                self.showError(with: "Networking Error", message: error.localizedDescription)
             }
         }
     }

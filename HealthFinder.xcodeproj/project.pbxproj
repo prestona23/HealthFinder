@@ -23,6 +23,7 @@
 		9305B9F5234B88F0006F8895 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305B9F4234B88F0006F8895 /* ContentViewController.swift */; };
 		9305B9F8234B9359006F8895 /* ResourceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305B9F7234B9359006F8895 /* ResourceTableViewCell.swift */; };
 		9305B9FA234B9CE8006F8895 /* ResourceDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305B9F9234B9CE8006F8895 /* ResourceDetailTableViewCell.swift */; };
+		9305B9FD234BC7A1006F8895 /* UIViewController+ShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305B9FC234BC7A1006F8895 /* UIViewController+ShowAlert.swift */; };
 		93A5DF64234ADE3F00F886BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5DF63234ADE3F00F886BD /* AppDelegate.swift */; };
 		93A5DF66234ADE3F00F886BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5DF65234ADE3F00F886BD /* SceneDelegate.swift */; };
 		93A5DF6B234ADE3F00F886BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A5DF69234ADE3F00F886BD /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 		9305B9F4234B88F0006F8895 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		9305B9F7234B9359006F8895 /* ResourceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceTableViewCell.swift; sourceTree = "<group>"; };
 		9305B9F9234B9CE8006F8895 /* ResourceDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceDetailTableViewCell.swift; sourceTree = "<group>"; };
+		9305B9FC234BC7A1006F8895 /* UIViewController+ShowAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ShowAlert.swift"; sourceTree = "<group>"; };
 		93A5DF60234ADE3F00F886BD /* HealthFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A5DF63234ADE3F00F886BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93A5DF65234ADE3F00F886BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +148,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		9305B9FB234BC775006F8895 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9305B9FC234BC7A1006F8895 /* UIViewController+ShowAlert.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		93A5DF57234ADE3F00F886BD = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +179,7 @@
 		93A5DF62234ADE3F00F886BD /* HealthFinder */ = {
 			isa = PBXGroup;
 			children = (
+				9305B9FB234BC775006F8895 /* Extensions */,
 				9305B9F6234B9333006F8895 /* Cells */,
 				9305B9EF234B7EEA006F8895 /* Providers */,
 				9305B9EC234B779B006F8895 /* Enums */,
@@ -406,6 +417,7 @@
 				9305B9E0234B75B1006F8895 /* InlineModel.swift in Sources */,
 				93A5DF64234ADE3F00F886BD /* AppDelegate.swift in Sources */,
 				9305B9E8234B76A7006F8895 /* Section.swift in Sources */,
+				9305B9FD234BC7A1006F8895 /* UIViewController+ShowAlert.swift in Sources */,
 				9305B9DC234B7513006F8895 /* MyHealthFinderService.swift in Sources */,
 				9305B9E6234B768F006F8895 /* Sections.swift in Sources */,
 				9305B9F3234B8642006F8895 /* ResourceDetailListProvider.swift in Sources */,
