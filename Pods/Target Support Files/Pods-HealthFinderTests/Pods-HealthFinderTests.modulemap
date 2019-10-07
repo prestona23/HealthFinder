@@ -1,0 +1,6 @@
+framework module Pods_HealthFinderTests {
+  umbrella header "Pods-HealthFinderTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

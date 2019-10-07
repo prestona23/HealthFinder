@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13B5AD7EF8F753550FAEFF89 /* Pods_HealthFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9727A5E45468BEAEC1D1DEB /* Pods_HealthFinder.framework */; };
+		2BB8D755EC1C037553DF0297 /* Pods_HealthFinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACCEBD08E658F3054CF0E5D7 /* Pods_HealthFinderTests.framework */; };
 		93A5DF64234ADE3F00F886BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5DF63234ADE3F00F886BD /* AppDelegate.swift */; };
 		93A5DF66234ADE3F00F886BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5DF65234ADE3F00F886BD /* SceneDelegate.swift */; };
 		93A5DF6B234ADE3F00F886BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A5DF69234ADE3F00F886BD /* Main.storyboard */; };
@@ -28,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		006F8D86B616C53AF15F22FD /* Pods-HealthFinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthFinderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthFinderTests/Pods-HealthFinderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		93A5DF60234ADE3F00F886BD /* HealthFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A5DF63234ADE3F00F886BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93A5DF65234ADE3F00F886BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +43,11 @@
 		93A5DF7C234ADE4000F886BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A5DF86234AE46200F886BD /* ResourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesViewController.swift; sourceTree = "<group>"; };
 		93A5DF88234AE4D100F886BD /* ResourceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceDetailViewController.swift; sourceTree = "<group>"; };
+		ACCEBD08E658F3054CF0E5D7 /* Pods_HealthFinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthFinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1744D4CDB9F00D9783FC943 /* Pods-HealthFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthFinder/Pods-HealthFinder.release.xcconfig"; sourceTree = "<group>"; };
+		B869692CB94500468629927F /* Pods-HealthFinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthFinderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthFinderTests/Pods-HealthFinderTests.release.xcconfig"; sourceTree = "<group>"; };
+		EAC362EFD0FB38B00FF18DBC /* Pods-HealthFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthFinder/Pods-HealthFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		F9727A5E45468BEAEC1D1DEB /* Pods_HealthFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13B5AD7EF8F753550FAEFF89 /* Pods_HealthFinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BB8D755EC1C037553DF0297 /* Pods_HealthFinderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +76,8 @@
 				93A5DF62234ADE3F00F886BD /* HealthFinder */,
 				93A5DF79234ADE4000F886BD /* HealthFinderTests */,
 				93A5DF61234ADE3F00F886BD /* Products */,
+				DF6798B5481F0B9F57F21CE0 /* Pods */,
+				BDD982E6BADC83DB97E3A4ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +122,26 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		BDD982E6BADC83DB97E3A4ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9727A5E45468BEAEC1D1DEB /* Pods_HealthFinder.framework */,
+				ACCEBD08E658F3054CF0E5D7 /* Pods_HealthFinderTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF6798B5481F0B9F57F21CE0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EAC362EFD0FB38B00FF18DBC /* Pods-HealthFinder.debug.xcconfig */,
+				B1744D4CDB9F00D9783FC943 /* Pods-HealthFinder.release.xcconfig */,
+				006F8D86B616C53AF15F22FD /* Pods-HealthFinderTests.debug.xcconfig */,
+				B869692CB94500468629927F /* Pods-HealthFinderTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -117,9 +149,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93A5DF7F234ADE4000F886BD /* Build configuration list for PBXNativeTarget "HealthFinder" */;
 			buildPhases = (
+				AB41906B40DA8AE2E7858A6D /* [CP] Check Pods Manifest.lock */,
 				93A5DF5C234ADE3F00F886BD /* Sources */,
 				93A5DF5D234ADE3F00F886BD /* Frameworks */,
 				93A5DF5E234ADE3F00F886BD /* Resources */,
+				BE7688A580845264E9B000C6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,6 +168,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93A5DF82234ADE4000F886BD /* Build configuration list for PBXNativeTarget "HealthFinderTests" */;
 			buildPhases = (
+				C266AE6C460ACD15A476FB6C /* [CP] Check Pods Manifest.lock */,
 				93A5DF72234ADE4000F886BD /* Sources */,
 				93A5DF73234ADE4000F886BD /* Frameworks */,
 				93A5DF74234ADE4000F886BD /* Resources */,
@@ -205,6 +240,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AB41906B40DA8AE2E7858A6D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HealthFinder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE7688A580845264E9B000C6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HealthFinder/Pods-HealthFinder-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HealthFinder/Pods-HealthFinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C266AE6C460ACD15A476FB6C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HealthFinderTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		93A5DF5C234ADE3F00F886BD /* Sources */ = {
@@ -372,6 +476,7 @@
 		};
 		93A5DF80234ADE4000F886BD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAC362EFD0FB38B00FF18DBC /* Pods-HealthFinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -389,6 +494,7 @@
 		};
 		93A5DF81234ADE4000F886BD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1744D4CDB9F00D9783FC943 /* Pods-HealthFinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -406,6 +512,7 @@
 		};
 		93A5DF83234ADE4000F886BD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 006F8D86B616C53AF15F22FD /* Pods-HealthFinderTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -427,6 +534,7 @@
 		};
 		93A5DF84234ADE4000F886BD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B869692CB94500468629927F /* Pods-HealthFinderTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
