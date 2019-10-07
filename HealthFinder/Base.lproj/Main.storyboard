@@ -217,6 +217,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="j6a-61-FIO" kind="show" identifier="ContentSegueIdentifier" id="QJT-i9-YQg"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -241,6 +244,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cg3-Dk-Nxl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1349.5999999999999" y="203.74812593703149"/>
+        </scene>
+        <!--Content View Controller-->
+        <scene sceneID="hGa-r0-jz0">
+            <objects>
+                <viewController id="j6a-61-FIO" customClass="ContentViewController" customModule="HealthFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cE4-dF-67I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="R8R-1A-IzS">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="R8R-1A-IzS" firstAttribute="leading" secondItem="uwM-Ny-Kh4" secondAttribute="leading" id="PFe-CP-zP4"/>
+                            <constraint firstItem="R8R-1A-IzS" firstAttribute="trailing" secondItem="uwM-Ny-Kh4" secondAttribute="trailing" id="g7b-Ay-VN9"/>
+                            <constraint firstItem="R8R-1A-IzS" firstAttribute="top" secondItem="uwM-Ny-Kh4" secondAttribute="top" id="tRd-pU-j6J"/>
+                            <constraint firstItem="R8R-1A-IzS" firstAttribute="bottom" secondItem="uwM-Ny-Kh4" secondAttribute="bottom" id="wkI-ie-3Nc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uwM-Ny-Kh4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kcE-EE-VbS"/>
+                    <connections>
+                        <outlet property="contentTextView" destination="R8R-1A-IzS" id="Vlr-6y-MN2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LuX-Su-7uK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2287.1999999999998" y="203.74812593703149"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AFJ-Om-4vL">

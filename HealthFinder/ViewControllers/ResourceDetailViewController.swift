@@ -44,15 +44,20 @@ class ResourceDetailViewController: UIViewController {
         
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == ContentSegueIdentifier {
+            if let contentController = segue.destination as? ContentViewController,
+                let index = sectionTableView.indexPathForSelectedRow?.row {
+                contentController.content = resourceDetailListProvider.sectionAt(index: index)?.content
+            }
+        }
     }
-    */
+    
 
 }
 
