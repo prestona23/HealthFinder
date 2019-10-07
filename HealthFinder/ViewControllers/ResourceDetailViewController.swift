@@ -34,13 +34,12 @@ class ResourceDetailViewController: UIViewController {
             return
         }
     
-        print(sections)
         resourceDetailListProvider.refreshSections(sections: sections)
     }
     
     private func setupTableView() {
         sectionTableView.rowHeight = UITableView.automaticDimension
-        sectionTableView.estimatedRowHeight = 44.0
+        sectionTableView.estimatedRowHeight = 60.0
         
     }
 
@@ -52,8 +51,9 @@ class ResourceDetailViewController: UIViewController {
         
         if segue.identifier == ContentSegueIdentifier {
             if let contentController = segue.destination as? ContentViewController,
-                let index = sectionTableView.indexPathForSelectedRow?.row {
-                contentController.content = resourceDetailListProvider.sectionAt(index: index)?.content
+                let indexPath = sectionTableView.indexPathForSelectedRow{
+                sectionTableView.deselectRow(at: indexPath, animated: true)
+                contentController.content = resourceDetailListProvider.sectionAt(index: indexPath.row)?.content
             }
         }
     }
@@ -69,11 +69,18 @@ extension ResourceDetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: SectionCellIdentifier, for: indexPath)
+        
+        //There are a few ways to go about this. Apple routinely just force unwraps ("!") the cell causing a crash if it's not
+        //the proper cell type. This isn't necessarily bad because you "should" have a table cell at this point and if you don't
+        //there is probably something catastrophically wrong. The other option is to not crash and return a cell
+        //which may confuse the end user. Chose the more defensive approach here.
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: SectionCellIdentifier, for: indexPath) as? ResourceDetailTableViewCell else {
+            return UITableViewCell()
+        }
         
         let section = resourceDetailListProvider.sectionAt(index: indexPath.row)
-        cell.textLabel?.text = section?.title ?? ""
-        cell.detailTextLabel?.text = section?.description ?? ""
+        
+        cell.configureCell(forSection: section)
         
         return cell
     }

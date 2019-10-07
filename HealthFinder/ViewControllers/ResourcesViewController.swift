@@ -23,7 +23,13 @@ class ResourcesViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupTableView()
         setupSearchFields()
+    }
+    
+    private func setupTableView() {
+        resourcesTableView.rowHeight = UITableView.automaticDimension
+        resourcesTableView.estimatedRowHeight = 80.0
     }
     
     private func setupSearchFields() {

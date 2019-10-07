@@ -22,6 +22,7 @@
 		9305B9F3234B8642006F8895 /* ResourceDetailListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305B9F2234B8642006F8895 /* ResourceDetailListProvider.swift */; };
 		9305B9F5234B88F0006F8895 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305B9F4234B88F0006F8895 /* ContentViewController.swift */; };
 		9305B9F8234B9359006F8895 /* ResourceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305B9F7234B9359006F8895 /* ResourceTableViewCell.swift */; };
+		9305B9FA234B9CE8006F8895 /* ResourceDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9305B9F9234B9CE8006F8895 /* ResourceDetailTableViewCell.swift */; };
 		93A5DF64234ADE3F00F886BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5DF63234ADE3F00F886BD /* AppDelegate.swift */; };
 		93A5DF66234ADE3F00F886BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5DF65234ADE3F00F886BD /* SceneDelegate.swift */; };
 		93A5DF6B234ADE3F00F886BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A5DF69234ADE3F00F886BD /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 		9305B9F2234B8642006F8895 /* ResourceDetailListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceDetailListProvider.swift; sourceTree = "<group>"; };
 		9305B9F4234B88F0006F8895 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		9305B9F7234B9359006F8895 /* ResourceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceTableViewCell.swift; sourceTree = "<group>"; };
+		9305B9F9234B9CE8006F8895 /* ResourceDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceDetailTableViewCell.swift; sourceTree = "<group>"; };
 		93A5DF60234ADE3F00F886BD /* HealthFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A5DF63234ADE3F00F886BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93A5DF65234ADE3F00F886BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				9305B9F7234B9359006F8895 /* ResourceTableViewCell.swift */,
+				9305B9F9234B9CE8006F8895 /* ResourceDetailTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				93A5DF89234AE4D100F886BD /* ResourceDetailViewController.swift in Sources */,
 				9305B9E2234B75DD006F8895 /* Resources.swift in Sources */,
 				9305B9F1234B7F05006F8895 /* ResourceListProvider.swift in Sources */,
+				9305B9FA234B9CE8006F8895 /* ResourceDetailTableViewCell.swift in Sources */,
 				9305B9EE234B77C1006F8895 /* HealthFinderResult.swift in Sources */,
 				93A5DF87234AE46200F886BD /* ResourcesViewController.swift in Sources */,
 				93A5DF66234ADE3F00F886BD /* SceneDelegate.swift in Sources */,
