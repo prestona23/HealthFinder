@@ -18,10 +18,9 @@ class ResourceTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    override func prepareForReuse() {
+        resourceImageView.image = nil
+        resourceTitleLabel.text = nil
     }
     
     func configureCell(forResource resource: Resource?) {
