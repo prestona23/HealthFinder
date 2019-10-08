@@ -26,8 +26,10 @@ class ResourceDetailTableViewCell: UITableViewCell {
     
     func configureCell(forSection section: Section?) {
         
+        //Check whether both the title and description are nil, and set
+        //a default value if they are.
         if section?.title == nil && section?.description == nil {
-            titleLabel.text = "Additional Content.."
+            titleLabel.text = "Read More About This Topic.."
             subtitleLabel.text = ""
         }
         else {

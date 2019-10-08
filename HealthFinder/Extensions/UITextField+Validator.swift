@@ -10,6 +10,11 @@ import Foundation
 import UIKit
 
 extension UITextField {
+    
+    /// Method to make showing errors a little easier using a simple alert.
+    ///
+    /// - Parameters:
+    ///   - type: The validation type that you are looking to validate against.
     func validateTextField(type: ValidationType) throws -> Void {
         switch type {
         case .requiredField(let fieldName):

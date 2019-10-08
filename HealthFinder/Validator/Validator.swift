@@ -25,8 +25,9 @@ protocol Validator {
     func validate(value: String) throws -> Void
 }
 
+/// Validator for fields that require text.
 class RequiredFieldValidator: Validator {
-    
+    /// The field name that the validator is validating.
     private var fieldName: String
     
     init(fieldName: String) {
@@ -42,8 +43,9 @@ class RequiredFieldValidator: Validator {
     
 }
 
+/// Valdiator for fields that require and age range between 0 & 150.
 class ValidAgeRangeValidator: Validator {
-    
+    /// The field name that the validator is validating.
     private var fieldName: String
     
     init(fieldName: String) {

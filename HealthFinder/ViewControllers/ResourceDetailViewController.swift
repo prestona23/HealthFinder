@@ -29,6 +29,7 @@ class ResourceDetailViewController: UIViewController {
         sectionTableView.reloadData()
     }
     
+    /// Setup the provider based on the injected resource.
     private func setupProvider() {
         guard let resource = resource, let sections = resource.sections?.section else {
             return
@@ -37,6 +38,7 @@ class ResourceDetailViewController: UIViewController {
         resourceDetailListProvider.refreshSections(sections: sections)
     }
     
+    /// Setup the table view defaults.
     private func setupTableView() {
         sectionTableView.rowHeight = UITableView.automaticDimension
         sectionTableView.estimatedRowHeight = 60.0

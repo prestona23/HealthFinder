@@ -12,14 +12,17 @@ final class ResourceDetailListProvider {
     
     private var sections: [Section]
     
+    /// Convience init to initialize with a blank set of sections.
     convenience init() {
         self.init(sections: [])
     }
     
+    /// Initialize with a set of sections.
     init(sections: [Section]) {
         self.sections = sections
     }
     
+    /// Return the number of sections.
     func sectionCount() -> Int {
         return sections.count
     }
@@ -32,6 +35,9 @@ final class ResourceDetailListProvider {
         return sections[index]
     }
     
+    /// Replace the sections with a new set of resources.
+    /// - Parameters:
+    ///    - sections: The new sections to replace.
     func refreshSections(sections: [Section]) {
         self.sections.removeAll()
         self.sections.append(contentsOf: sections)

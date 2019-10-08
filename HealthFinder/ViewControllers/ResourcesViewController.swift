@@ -30,16 +30,19 @@ class ResourcesViewController: UIViewController {
         setupSearchFields()
     }
     
+    /// Sets up the progress view and hides it.
     private func setupProgressView() {
         progressView.layer.cornerRadius = cornerRadius
         hideProgressView(true)
     }
     
+    /// Sets up some initial table view values.
     private func setupTableView() {
         resourcesTableView.rowHeight = UITableView.automaticDimension
         resourcesTableView.estimatedRowHeight = 80.0
     }
     
+    /// Sets up the search fields by adding the corner radius for the button and adds a done button to the age textfield.
     private func setupSearchFields() {
         searchButton.layer.cornerRadius = cornerRadius
         
@@ -51,15 +54,18 @@ class ResourcesViewController: UIViewController {
         ageTextField.inputAccessoryView = toolbar
     }
     
+    /// Retrieves the resources for the server.
     private func searchForResources() {
+        // Age and sex have been validated at the point so we can just grab them.
         let age = ageTextField.text ?? ""
         let sex = (sexSegmentedControl.selectedSegmentIndex == 0) ? "Male" : "Female"
         
+        // Disable the search controls so that you can't double click and show the progress view.
         enableSearchControls(false)
         hideProgressView(false)
         
         NetworkManager().getHealthFinderResultsFor(age: age, sex: sex) { (result) in
-            
+            // Re-enable the search controls and hide the progress view.
             self.hideProgressView(true)
             self.enableSearchControls(true)
             
@@ -78,6 +84,7 @@ class ResourcesViewController: UIViewController {
         }
     }
     
+    /// Updates the table with the new resources.
     private func updateTableWith(_ results: MyHealthFinderResult) {
         var resources = [Resource]()
         if let interest = results.resources?.interest, let interestResources = interest.resource {
@@ -96,14 +103,17 @@ class ResourcesViewController: UIViewController {
         resourcesTableView.reloadData()
     }
     
+    /// Disables or enables the search button.
     private func enableSearchControls(_ enable: Bool) {
         searchButton.isEnabled = enable
     }
     
+    /// Hides or shows the progress view.
     private func hideProgressView(_ hide: Bool) {
         progressView.isHidden = hide
     }
     
+    /// Validates the search fields.
     private func validateFields() -> Bool {
         do {
             try ageTextField.validateTextField(type: .requiredField(field: "Age"))
