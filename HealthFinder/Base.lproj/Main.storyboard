@@ -180,6 +180,7 @@
                         <outlet property="progressView" destination="wpE-jX-Rz8" id="WN5-Ak-qyx"/>
                         <outlet property="resourcesTableView" destination="jIY-zU-ZXa" id="H32-8Y-0kM"/>
                         <outlet property="searchButton" destination="wIj-Vx-Nj1" id="BH5-hk-4Ec"/>
+                        <outlet property="searchContainerView" destination="paq-aS-t03" id="Tgf-G2-o0A"/>
                         <outlet property="sexSegmentedControl" destination="cpy-lX-DS5" id="Qfm-qC-bge"/>
                     </connections>
                 </viewController>

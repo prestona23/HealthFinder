@@ -15,6 +15,7 @@ class ResourcesViewController: UIViewController {
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var resourcesTableView: UITableView!
     @IBOutlet weak var progressView: UIView!
+    @IBOutlet weak var searchContainerView: UIView!
     
     private let resourceListProvider = ResourceListProvider()
     private let CellIdentifier = "ResourceListCell"
@@ -44,14 +45,20 @@ class ResourcesViewController: UIViewController {
     
     /// Sets up the search fields by adding the corner radius for the button and adds a done button to the age textfield.
     private func setupSearchFields() {
+        // Make the search button round.
         searchButton.layer.cornerRadius = cornerRadius
         
+        // Add a done button to the age text field.
         let toolbar = UIToolbar(frame: CGRect(x: 0.0, y: 0.0, width: UIScreen.main.bounds.width, height: 40.0))
         let flexibleButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(didPressDone(_ :)))
         toolbar.items = [flexibleButton, doneButton]
 
         ageTextField.inputAccessoryView = toolbar
+        
+        // Add some borders to the search container view so it isn't so bland.
+        searchContainerView.layer.borderWidth = 0.5
+        searchContainerView.layer.borderColor = UIColor.lightGray.cgColor
     }
     
     /// Retrieves the resources for the server.
