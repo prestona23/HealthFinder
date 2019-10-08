@@ -19,7 +19,7 @@ final class NetworkManager {
         guard let url = URL(string: baseHealthFinderPath+"?api_key="+apiKey+"&age="+age+"&sex="+sex) else {
             return
         }
-        print(url.absoluteString)
+        
         Alamofire.request(url, method: .get).responseData { (response) in
             if let responseError = response.error {
                 completion(.failure(responseError))

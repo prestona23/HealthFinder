@@ -42,6 +42,13 @@ class ResourcesViewController: UIViewController {
     
     private func setupSearchFields() {
         searchButton.layer.cornerRadius = cornerRadius
+        
+        let toolbar = UIToolbar(frame: CGRect(x: 0.0, y: 0.0, width: UIScreen.main.bounds.width, height: 40.0))
+        let flexibleButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(didPressDone(_ :)))
+        toolbar.items = [flexibleButton, doneButton]
+
+        ageTextField.inputAccessoryView = toolbar
     }
     
     private func searchForResources() {
@@ -96,14 +103,6 @@ class ResourcesViewController: UIViewController {
     private func hideProgressView(_ hide: Bool) {
         progressView.isHidden = hide
     }
-
-    @IBAction func didClickSearch(_ sender: Any) {
-        ageTextField.resignFirstResponder()
-        
-        if validateFields() {
-            searchForResources()
-        }
-    }
     
     private func validateFields() -> Bool {
         do {
@@ -119,6 +118,18 @@ class ResourcesViewController: UIViewController {
         
         
         return true
+    }
+
+    @IBAction func didClickSearch(_ sender: Any) {
+        ageTextField.resignFirstResponder()
+        
+        if validateFields() {
+            searchForResources()
+        }
+    }
+    
+    @objc func didPressDone(_ sender: UIBarButtonItem) {
+        ageTextField.resignFirstResponder()
     }
     
     
